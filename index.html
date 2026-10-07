@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>🌈🧱🐾</title>
+  <link rel="icon" type="image/jpeg" href="icons/dogday.jpg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="kid-shell">
+    <!-- Top Bar: 8 Big Critter Avatar Buttons (100% Zero Text) -->
+    <header class="kid-topbar">
+      <nav id="levelNavBar" class="critter-nav" aria-label="Critters"></nav>
+    </header>
+
+    <!-- Main Stage: Left Toy Button Dock + Rainbow Brick Breaker Canvas -->
+    <main class="kid-stage">
+      <!-- Left Toy Button Dock (100% Zero Text) -->
+      <aside class="toy-dock">
+        <button id="btnLaunchOrLaser" class="toy-btn active" aria-label="Launch">🚀</button>
+        <button id="btnMultiBall" class="toy-btn boost-triple" aria-label="Multiball">⚽</button>
+        <button id="btnFireComet" class="toy-btn boost-mega" aria-label="Fireball">☄️</button>
+        <div class="dock-divider"></div>
+        <button id="btnWidePaddle" class="toy-btn boost-hint" aria-label="Wide">🛸</button>
+        <button id="btnResetLevel" class="toy-btn boost-reset" aria-label="Replay">🔁</button>
+        <button id="btnSoundToggle" class="toy-btn boost-sound" aria-label="Sound">🔊</button>
+      </aside>
+
+      <!-- Center Visual HUD + Interactive Rainbow Brick Breaker Canvas -->
+      <section class="canvas-wrap">
+        <div class="visual-hud">
+          <div class="hud-critter-badge">
+            <img id="sideCritterImg" src="icons/dogday.jpg" alt="" />
+            <span id="critterPowerBadge" class="hud-mood">🌈</span>
+          </div>
+
+          <div class="hud-stars" id="starSlotsRow">
+            <div class="hud-star" id="starSlot0">⭐</div>
+            <div class="hud-star" id="starSlot1">⭐</div>
+            <div class="hud-star" id="starSlot2">⭐</div>
+          </div>
+
+          <div class="hud-targets" id="targetSlotsRow"></div>
+        </div>
+
+        <div class="canvas-frame" id="canvasFrame">
+          <canvas id="gameCanvas" width="820" height="540"></canvas>
+          <div id="floatingToast" class="floating-toast hidden">🌈✨</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pure Visual Level Complete Celebration Modal (100% Zero Text) -->
+    <div id="winModal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+      <div class="modal-card win-card-visual">
+        <div class="win-sparkles-row">🌈 🧱 👑 🧱 🌈</div>
+        <div class="win-avatar-giant">
+          <img id="winCritterImg" src="icons/dogday.jpg" alt="" />
+          <span id="winPowerBadge" class="win-treat-badge">🌈</span>
+          <span class="win-happy-badge">🥳</span>
+        </div>
+        <div class="win-stars-row" id="winStarsDisplay">
+          <div class="win-star-big earned">⭐</div>
+          <div class="win-star-big earned">⭐</div>
+          <div class="win-star-big earned">⭐</div>
+        </div>
+        <div class="win-actions-row">
+          <button id="btnWinReplay" class="kid-action-btn replay">🔁</button>
+          <button id="btnWinNext" class="kid-action-btn next">▶️</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pure Visual All-8 Critters Champions Finale Modal (100% Zero Text) -->
+    <div id="finaleModal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+      <div class="modal-card finale-card-visual">
+        <div class="win-sparkles-row">🌈 🏆 🧱 ⭐ 🧱 🏆 🌈</div>
+        <div id="finaleCrittersGrid" class="finale-critters-grid"></div>
+        <div class="win-actions-row">
+          <button id="btnFinaleClose" class="kid-action-btn next">🎉</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
